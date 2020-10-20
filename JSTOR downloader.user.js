@@ -2,8 +2,9 @@
 // @name           JSTOR downloader
 // @namespace    https://github.com/sun-jiao
 // @match          https://plants.jstor.org/stable/10.5555/al.ap.specimen.*
+// @match          https://plants.jstor.org/stable/10.5555/al.ap.visual.*
 // @grant          GM_xmlhttpRequest
-// @version        1.1
+// @version        1.2
 // @author       Sun Jiao
 // @license        MIT
 // @description    Display a banner to download the specimen picture on JSTOR or view it in browser.
@@ -19,8 +20,8 @@ var title = document.getElementsByTagName("title")[0].innerHTML;
 
 function getDownloadLink(url) {
     var res = url.split("?searchUri")[0];
-    var finalres = res.split("al.ap.specimen.")[1];
-    var urlwithprefix = PREFIX.concat(finalres);
+    var finalres = res.split(".");
+    var urlwithprefix = PREFIX.concat(finalres[finalres.length - 1]);
     var fulldownloadurl = urlwithprefix.concat(SUFFIX);
     console.log("full url:", fulldownloadurl);
     return fulldownloadurl;
