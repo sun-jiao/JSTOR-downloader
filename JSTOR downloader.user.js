@@ -3,7 +3,7 @@
 // @namespace    https://github.com/sun-jiao
 // @match          https://plants.jstor.org/stable/10.5555/al.ap.specimen.*
 // @grant          GM_xmlhttpRequest
-// @version        1.0
+// @version        1.1
 // @author       Sun Jiao
 // @license        MIT
 // @description    Display a banner to download the specimen picture on JSTOR or view it in browser.
@@ -61,6 +61,7 @@ function buildOpenContent(openLink) {
     const openLinkElement = document.createElement('a');
     openLinkElement.textContent = "Open in browser.";
     openLinkElement.href = openLink;
+    openLinkElement.target="_blank";
     openLinkElement.style = `
       color: white;
       font-size: 16px;
