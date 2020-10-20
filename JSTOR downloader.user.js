@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name           JSTOR downloader
-// @namespace      https://www.sunjiao.moe
+// @namespace    https://github.com/sun-jiao
 // @match          https://plants.jstor.org/stable/10.5555/al.ap.specimen.*
 // @grant          GM_xmlhttpRequest
 // @version        1.0
-// @author         sunjiao
+// @author       Sun Jiao
 // @license        MIT
 // @description    Display a banner to download the specimen picture on JSTOR or view it in browser.
 // ==/UserScript==
